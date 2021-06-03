@@ -1,6 +1,7 @@
 import React from "react";
 import "./styles.css";
 import { useState } from "react";
+import icon from "./trending.png";
 
 const GadgetDB = {
   Laptop: [
@@ -59,9 +60,9 @@ export default function App() {
   let gadgetStyle = {
     cursor: "pointer",
     background: "#E5E7EB",
-    borderRadius: "0.5rem",
+    borderRadius: "5px",
     padding: "0.5rem  1rem",
-    border: "1px solid black",
+    border: "1px solid silver",
     margin: "1rem 0.3rem"
   };
   let gadetListStyle = {
@@ -77,7 +78,19 @@ export default function App() {
   }
   return (
     <div className="App">
-      <h1> Trending Recommends </h1>
+      <h1>
+        <span>
+          <img
+            src={icon}
+            alt="icon"
+            style={{
+              width: "25px",
+              height: "25px"
+            }}
+          />
+        </span>{" "}
+        Trending <span style={{ color: "orange" }}>Recommends</span>{" "}
+      </h1>
       <p style={{ fontSize: "smaller" }}>
         {" "}
         Checkout my favorite recommendation from current trends. Select a
@@ -94,23 +107,17 @@ export default function App() {
           </button>
         ))}
       </div>
-      <hr />
+      <hr
+        style={{
+          width: "75%",
+          float: "left",
+
+          border: "1px solid orange"
+        }}
+      />
       <div style={{ textAlign: "left" }}>
         <ul style={{ paddingInlineStart: "0" }}>
           {GadgetDB[selectedGadget].map((gadgetName) => (
-            <li key={gadgetName.name} style={gadetListStyle}>
-              {" "}
-              <div style={{ fontSize: "larger" }}> {gadgetName.name} </div>
-              <div style={{ fontSize: "smaller" }}> {gadgetName.rating} </div>
-            </li>
-          ))}
-        </ul>
-        ))}
-      </div>
-    </div>
-  );
-}
-
             <li key={gadgetName.name} style={gadetListStyle}>
               {" "}
               <div style={{ fontSize: "larger" }}> {gadgetName.name} </div>
