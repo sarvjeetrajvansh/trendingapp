@@ -87,6 +87,7 @@ export default function App() {
           <button
             onClick={() => gadgetClickHandler(gadgetName)}
             style={gadgetStyle}
+            key={gadgetName}
           >
             {gadgetName}
           </button>
