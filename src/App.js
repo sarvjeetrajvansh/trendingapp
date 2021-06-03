@@ -1,6 +1,7 @@
 import React from "react";
 import "./styles.css";
 import { useState } from "react";
+
 const GadgetDB = {
   Laptop: [
     { name: "Mackbook Pro", rating: "4.5/5" },
@@ -87,6 +88,7 @@ export default function App() {
           <button
             onClick={() => gadgetClickHandler(gadgetName)}
             style={gadgetStyle}
+            key={gadgetName}
           >
             {gadgetName}
           </button>
@@ -96,6 +98,19 @@ export default function App() {
       <div style={{ textAlign: "left" }}>
         <ul style={{ paddingInlineStart: "0" }}>
           {GadgetDB[selectedGadget].map((gadgetName) => (
+            <li key={gadgetName.name} style={gadetListStyle}>
+              {" "}
+              <div style={{ fontSize: "larger" }}> {gadgetName.name} </div>
+              <div style={{ fontSize: "smaller" }}> {gadgetName.rating} </div>
+            </li>
+          ))}
+        </ul>
+        ))}
+      </div>
+    </div>
+  );
+}
+
             <li key={gadgetName.name} style={gadetListStyle}>
               {" "}
               <div style={{ fontSize: "larger" }}> {gadgetName.name} </div>
