@@ -1,4 +1,4 @@
-# trendingapp
+# Trendingapp
 > ## Are you in trend ?
 
-[Check this out](https://06uu4.csb.app/)
+[Check this out](https://trendify.netlify.app/)
