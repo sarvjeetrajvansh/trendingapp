@@ -6,7 +6,10 @@ import icon from "./trending.png";
 const GadgetDB = {
   Laptop: [
     { name: "Mackbook Pro", rating: "4.5/5" },
-    { name: "Thinkpad carbon X1", rating: "3.5/5" }
+    { name: "Thinkpad carbon X1", rating: "4/5" },
+    { name: "Macbook Air", rating: "3.8/5" },
+    { name: "Lenevo flex 5i", rating: "3.5/5" },
+    { name: "Dell Xps", rating: "3.5/5" }
   ],
 
   Mobile: [
